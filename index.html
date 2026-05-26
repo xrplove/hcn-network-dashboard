@@ -284,14 +284,57 @@
             </div>
         </header>
 
-        <!-- XRPL Portals Section -->
-        <h2 class="section-title"><span class="section-icon">⚡</span> XRPL Portal Network</h2>
+        <!-- Layer A: Citizen Registry -->
+        <h2 class="section-title"><span class="section-icon">👥</span> Layer A — Citizen Registry System</h2>
         <div class="cards-grid">
-            <!-- Portal 1 -->
             <div class="card">
                 <div class="card-header">
-                    <span class="card-name">🔷 Parent Hub (Founder)</span>
-                    <span class="status-badge status-alive">ALIVE</span>
+                    <span class="card-name">Citizen Registration Portal</span>
+                    <span class="status-badge status-waiting">BUILDING</span>
+                </div>
+                <p style="color: var(--muted); font-size: 0.85rem; margin-bottom: 12px;">
+                    Citizens connect wallets → get registry IDs → receive DEVIL allocation → join territories
+                </p>
+                <div class="balance-row">
+                    <span class="balance-label">Status</span>
+                    <span class="balance-value">Web form in development</span>
+                </div>
+                <div class="balance-row">
+                    <span class="balance-label">Registry Contract</span>
+                    <span class="balance-value">Ready for Xahau deployment</span>
+                </div>
+                <div class="balance-row">
+                    <span class="balance-label">First Citizens</span>
+                    <span class="balance-value">Awaiting launch</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-name">Allocation Distribution Engine</span>
+                    <span class="status-badge status-waiting">READY</span>
+                </div>
+                <p style="color: var(--muted); font-size: 0.85rem; margin-bottom: 12px;">
+                    Automatic trustline creation and DEVIL distribution upon registration
+                </p>
+                <div class="balance-row">
+                    <span class="balance-label">Mechanism</span>
+                    <span class="balance-value">XRPL Payment + Trustline Set</span>
+                </div>
+                <div class="balance-row">
+                    <span class="balance-label">Fee Structure</span>
+                    <span class="balance-value">Configurable per tier</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Layer B: Territory Banking -->
+        <h2 class="section-title"><span class="section-icon">🏦</span> Layer B — Territory Banking Network</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-name">Parent Hub Zone</span>
+                    <span class="status-badge status-alive">ACTIVE</span>
                 </div>
                 <div class="address">rK4soWz7y8X4wjLjnQTKF4w2s9nNNQqgGZ</div>
                 <div class="balance-row">
@@ -299,48 +342,38 @@
                     <span class="balance-value balance-highlight" id="portal1-balance">15.90 XRP</span>
                 </div>
                 <div class="balance-row">
-                    <span class="balance-label">Sequence</span>
-                    <span class="balance-value" id="portal1-seq">78,042,785</span>
-                </div>
-                <div class="balance-row">
                     <span class="balance-label">Hook</span>
                     <span class="balance-value" style="color: var(--green)">cron-claimreward v1.0</span>
                 </div>
                 <div class="balance-row">
-                    <span class="balance-label">Trustlines</span>
-                    <span class="balance-value">5 NFT tokens</span>
+                    <span class="balance-label">Type</span>
+                    <span class="balance-value">Central Command</span>
                 </div>
             </div>
             
-            <!-- Portal 2 -->
             <div class="card">
                 <div class="card-header">
-                    <span class="card-name">🛡️ Secure Reserve</span>
-                    <span class="status-badge status-alive">ALIVE</span>
+                    <span class="card-name">Secure Reserve Treasury</span>
+                    <span class="status-badge status-alive">ACTIVE</span>
                 </div>
                 <div class="address">rKZKJ2dwdaqgzJXF83c1r7zvuqKpohjVkx</div>
                 <div class="balance-row">
-                    <span class="balance-label">Balance</span>
+                    <span class="balance-label">XRP Balance</span>
                     <span class="balance-value balance-highlight" id="portal2-balance">103.08 XRP</span>
                 </div>
                 <div class="balance-row">
-                    <span class="balance-label">Objects</span>
-                    <span class="balance-value">510</span>
+                    <span class="balance-label">DEVIL Bank</span>
+                    <span class="balance-value" style="color: var(--green)">✅ FULLY FUNDED</span>
                 </div>
                 <div class="balance-row">
-                    <span class="balance-label">DEVIL Token</span>
-                    <span class="balance-value" style="color: var(--green)">✅ Trustline Active</span>
-                </div>
-                <div class="balance-row">
-                    <span class="balance-label">Last Action</span>
-                    <span class="balance-value">OfferCreate</span>
+                    <span class="balance-label">Supply</span>
+                    <span class="balance-value">5 Quadrillion DEVIL</span>
                 </div>
             </div>
             
-            <!-- Heartbeat Sender -->
             <div class="card">
                 <div class="card-header">
-                    <span class="card-name">💓 Heartbeat Monitor</span>
+                    <span class="card-name">Heartbeat Monitor Zone</span>
                     <span class="status-badge status-alive">PULSING</span>
                 </div>
                 <div class="address">rKnp6Gg9w1EyHgLY6c7GdeixdxCct846tu</div>
@@ -353,64 +386,90 @@
                     <span class="balance-value">14+ accounts</span>
                 </div>
                 <div class="balance-row">
-                    <span class="balance-label">Pattern</span>
-                    <span class="balance-value">2-drop keep-alives</span>
-                </div>
-                <div class="balance-row">
                     <span class="balance-label">Last Ping</span>
                     <span class="balance-value" style="color: var(--green)" id="heartbeat-time">Active</span>
                 </div>
             </div>
         </div>
 
-        <!-- Ethereum / Immutable Section -->
-        <h2 class="section-title"><span class="section-icon">🌐</span> EVM & Immutable Assets</h2>
+        <!-- Layer C: Sensor Network -->
+        <h2 class="section-title"><span class="section-icon">📡</span> Layer C — Sensor Integration</h2>
         <div class="cards-grid">
-            <!-- Wallet 1 -->
             <div class="card">
                 <div class="card-header">
-                    <span class="card-name">🎮 Gaming Wallet #1</span>
-                    <span class="status-badge status-alive">ACTIVE</span>
+                    <span class="card-name">Air Quality Monitoring</span>
+                    <span class="status-badge status-waiting">PLANNED</span>
                 </div>
-                <div class="address">0xf90fd436...c54cc376</div>
+                <p style="color: var(--muted); font-size: 0.85rem; margin-bottom: 12px;">
+                    PM2.5, CO2, humidity, temperature feeds into economic signals
+                </p>
                 <div class="balance-row">
-                    <span class="balance-label">GODS (ETH Mainnet)</span>
-                    <span class="balance-value balance-highlight">67.02 GODS</span>
-                </div>
-                <div class="balance-row">
-                    <span class="balance-label">ETH (Immutable zkEVM)</span>
-                    <span class="balance-value balance-highlight" style="color: var(--accent2)">2.227 ETH</span>
+                    <span class="balance-label">Hardware</span>
+                    <span class="balance-value">ESP32 sensors ($5 each)</span>
                 </div>
                 <div class="balance-row">
-                    <span class="balance-label">Status</span>
-                    <span class="balance-value" style="color: var(--green)">Ready for deployment</span>
+                    <span class="balance-label">Data Path</span>
+                    <span class="balance-value">Sensor → Oracle → Economic Signal</span>
                 </div>
             </div>
             
-            <!-- Wallet 2 -->
             <div class="card">
                 <div class="card-header">
-                    <span class="card-name">📦 Previous Wallet</span>
-                    <span class="status-badge status-waiting">DUST</span>
+                    <span class="card-name">Music/Audio Basis</span>
+                    <span class="status-badge status-waiting">PLANNED</span>
                 </div>
-                <div class="address">0x9059b75b...1376b6E5B</div>
+                <p style="color: var(--muted); font-size: 0.85rem; margin-bottom: 12px;">
+                    Sound patterns minted as unique "Sound Snapshot" NFTs
+                </p>
                 <div class="balance-row">
-                    <span class="balance-label">GODS</span>
-                    <span class="balance-value">0.00061 (dust)</span>
-                </div>
-                <div class="balance-row">
-                    <span class="balance-label">ETH</span>
-                    <span class="balance-value">0.000023 (dust)</span>
+                    <span class="balance-label">Input</span>
+                    <span class="balance-value">Microphone modules + FFT analysis</span>
                 </div>
                 <div class="balance-row">
-                    <span class="balance-label">TX History</span>
-                    <span class="balance-value">11 transactions</span>
+                    <span class="balance-label">Output</span>
+                    <span class="balance-value">Audio NFTs tradable in marketplace</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-name">Horoscope/Cosmic Integration</span>
+                    <span class="status-badge status-waiting">PLANNED</span>
+                </div>
+                <p style="color: var(--muted); font-size: 0.85rem; margin-bottom: 12px;">
+                    Planetary positions mapped to economic cycles and bonuses
+                </p>
+                <div class="balance-row">
+                    <span class="balance-label">Dragon Days</span>
+                    <span class="balance-value" style="color: var(--accent)">🐉 Special bonus active</span>
+                </div>
+                <div class="balance-row">
+                    <span class="balance-label">Eclipse Events</span>
+                    <span class="balance-value">Trigger rare NFT mints</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-name">Infrastructure Sensors</span>
+                    <span class="status-badge status-waiting">PLANNED</span>
+                </div>
+                <p style="color: var(--muted); font-size: 0.85rem; margin-bottom: 12px;">
+                    Telephone poles, tunnels, portals monitored via GPS + citizen reports
+                </p>
+                <div class="balance-row">
+                    <span class="balance-label">Verification</span>
+                    <span class="balance-value">GPS-tagged photo submissions</span>
+                </div>
+                <div class="balance-row">
+                    <span class="balance-label">Rewards</span>
+                    <span class="balance-value">DEVIL earned for maintenance reports</span>
                 </div>
             </div>
         </div>
 
-        <!-- Bridge Architecture Diagram -->
-        <h2 class="section-title"><span class="section-icon">🌉</span> Cross-Chain Bridge Map</h2>
+        <!-- Layer D: Cross-Chain Bridge -->
+        <h2 class="section-title"><span class="section-icon">🌉</span> Layer D — Cross-Chain Bridge</h2>
         <div class="bridge-container">
             <div class="bridge-flow">
                 <div class="bridge-node highlight">
@@ -452,9 +511,29 @@
         <h2 class="section-title"><span class="section-icon">📋</span> Recent On-Chain Activity</h2>
         <div class="activity-feed" id="activity-feed">
             <div class="activity-item">
+                <span class="activity-time">2026-05-26 17:28</span>
+                <span class="activity-action">Master integration plan created — all 4 layers connected</span>
+                <span class="activity-hash">projects/E-MASTER-INTEGRATION.md</span>
+            </div>
+            <div class="activity-item">
+                <span class="activity-time">2026-05-26 17:26</span>
+                <span class="activity-action">All four infrastructure layers documented simultaneously</span>
+                <span class="activity-hash">A/B/C/D projects created</span>
+            </div>
+            <div class="activity-item">
+                <span class="activity-time">2026-05-26 17:22</span>
+                <span class="activity-action">DEVIL banking infrastructure verified on-chain</span>
+                <span class="activity-hash">projects/DEVIL-MONEY-BANKING-INFRASTRUCTURE.md</span>
+            </div>
+            <div class="activity-item">
+                <span class="activity-time">2026-05-26 17:18</span>
+                <span class="activity-action">GitHub Pages dashboard deployed successfully</span>
+                <span class="activity-hash">https://xrplove.github.io/hcn-network-dashboard/</span>
+            </div>
+            <div class="activity-item">
                 <span class="activity-time">2026-05-26 17:04</span>
-                <span class="activity-action">Network scan completed — all portals verified alive</span>
-                <span class="activity-hash">Dashboard Updated</span>
+                <span class="activity-action">Gaming wallet discovered — 67 GODS + 2.227 ETH confirmed</span>
+                <span class="activity-hash">Asset Audit Complete</span>
             </div>
             <div class="activity-item">
                 <span class="activity-time">2026-05-26 16:56</span>
@@ -463,13 +542,13 @@
             </div>
             <div class="activity-item">
                 <span class="activity-time">2026-05-26 16:46</span>
-                <span class="activity-action">Gaming wallet discovered — 67 GODS + 2.227 ETH confirmed</span>
-                <span class="activity-hash">Asset Audit Complete</span>
+                <span class="activity-action">Full bridge architecture designed and documented</span>
+                <span class="activity-hash">projects/BRIDGE-ARCHITECTURE-FULL.md</span>
             </div>
             <div class="activity-item">
                 <span class="activity-time">2026-05-26 09:51</span>
                 <span class="activity-action">Full network sweep — 5 accounts mapped and verified</span>
-                <span class="activity-hash">FULL-SWEEP-MAY-26-2026.md</span>
+                <span class="activity-hash">memory/FULL-SWEEP-MAY-26-2026.md</span>
             </div>
             <div class="activity-item">
                 <span class="activity-time">2026-05-25</span>
