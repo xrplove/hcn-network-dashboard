@@ -1,0 +1,14 @@
+{
+  "_note": "Read-only public XRP Ledger servers. No wallets, keys or secrets ever go in this file.",
+  "servers": [
+    "wss://xrplcluster.com",
+    "wss://s1.ripple.com",
+    "wss://s2.ripple.com"
+  ],
+  "connectTimeoutMs": 8000,
+  "watchAddresses": [
+    "rK4soWz7y8X4wjLjnQTKF4w2s9nNNQqgGZ",
+    "rKZKJ2dwdaqgzJXF83c1r7zvuqKpohjVkx",
+    "rKnp6Gg9w1EyHgLY6c7GdeixdxCct846tu"
+  ]
+}
