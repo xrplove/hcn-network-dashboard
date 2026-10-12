@@ -277,7 +277,7 @@
         <header>
             <h1>🏰 Hernandez Coordination Network</h1>
             <p class="subtitle">Live Cross-Chain Infrastructure Status Dashboard</p>
-            <div class="sig-line">SIG: 612121936 | NICHOLAS DANIEL HERNANDEZ | 03051988</div>
+            <div class="sig-line">589 • HERNANDEZ COORDINATION NETWORK • GUARDIAN PROTECTORS</div>
             <div class="pulse-live">
                 <span class="pulse-dot"></span>
                 NETWORK ACTIVE — LAST SCAN: <span id="scan-time"></span>
@@ -358,7 +358,7 @@
                 </div>
                 <div class="balance-row">
                     <span class="balance-label">Last Ping</span>
-                    <span class="balance-value" style="color: var(--green)" id="heartbeat-time">Active</span>
+                    <span class="balance-value" style="color: var(--green)" id="heartbeat-time" data-xrpl="ledger-index">Connecting…</span>
                 </div>
             </div>
         </div>
@@ -488,13 +488,9 @@
     </div>
 
     <script>
-        // Update timestamp
-        document.getElementById('scan-time').textContent = new Date().toISOString().split('T')[0] + ' ' + 
-            new Date().toTimeString().split(' ')[0] + ' UTC';
-        
-        // Simulate heartbeat time
-        document.getElementById('heartbeat-time').textContent = 
-            'Ledger ' + (Math.floor(Math.random() * 100000) + 104490000).toLocaleString();
+        document.getElementById('scan-time').textContent = new Date().toLocaleString();
     </script>
+    <!-- Live, read-only XRPL ledger index (same feed as the main dashboard) -->
+    <script src="../assets/xrpl-live.js" data-config="../data/config.json"></script>
 </body>
 </html>

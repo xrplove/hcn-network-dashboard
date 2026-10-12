@@ -50,9 +50,34 @@
     <header>
         <h1>🏰 Hernandez Coordination Network × Sologenic</h1>
         <p class="subtitle">Live Cross-Chain Infrastructure + NFT Marketplace Integration</p>
-        <div class="sig-line">SIG: 612121936 | NICHOLAS DANIEL HERNANDEZ | 03051988</div>
+        <div class="sig-line">589 • HERNANDEZ COORDINATION NETWORK • GUARDIAN PROTECTORS</div>
         <div class="pulse-live"><span class="pulse-dot"></span>NETWORK ACTIVE — LAST SCAN: <span id="scan-time"></span></div>
     </header>
+
+        <h2 class="section-title">📡 Live XRP Ledger <span class="status-badge status-waiting" id="xrpl-status">CONNECTING</span></h2>
+    <div class="cards-grid" id="xrpl-live">
+        <div class="card">
+            <div class="card-header"><span class="card-name">🧱 Latest Validated Ledger</span><span class="status-badge status-alive">READ-ONLY</span></div>
+            <div class="balance-row"><span class="balance-label">Ledger Index</span><span class="balance-value highlight" id="xrpl-ledger-index">…</span></div>
+            <div class="balance-row"><span class="balance-label">Close Time (your time)</span><span class="balance-value" id="xrpl-close-time">…</span></div>
+            <div class="balance-row"><span class="balance-label">Transactions in Ledger</span><span class="balance-value" style="color:var(--green)" id="xrpl-txn-count">…</span></div>
+            <div class="balance-row"><span class="balance-label">Recent Average</span><span class="balance-value" id="xrpl-txn-avg">…</span></div>
+        </div>
+        <div class="card">
+            <div class="card-header"><span class="card-name">⛽ Fees &amp; Reserves</span><span class="status-badge status-alive">LIVE</span></div>
+            <div class="balance-row"><span class="balance-label">Base Fee</span><span class="balance-value" id="xrpl-base-fee">…</span></div>
+            <div class="balance-row"><span class="balance-label">Account Reserve</span><span class="balance-value" id="xrpl-reserve">…</span></div>
+            <div class="balance-row"><span class="balance-label">Load Factor</span><span class="balance-value" id="xrpl-load">…</span></div>
+        </div>
+        <div class="card">
+            <div class="card-header"><span class="card-name">🛰️ Connection</span><span class="status-badge status-sologenic">PUBLIC</span></div>
+            <div class="address" id="xrpl-server">wss://xrplcluster.com</div>
+            <div class="balance-row"><span class="balance-label">Status</span><span class="balance-value" id="xrpl-status-text" style="font-size:.8rem">Starting…</span></div>
+            <div class="balance-row"><span class="balance-label">Validated Range</span><span class="balance-value" id="xrpl-range" style="font-size:.75rem;word-break:break-all">…</span></div>
+            <div class="balance-row"><span class="balance-label">Last Update</span><span class="balance-value" id="xrpl-updated">…</span></div>
+        </div>
+    </div>
+    <p style="color:var(--muted);font-size:.75rem;margin:-15px 0 20px">Real data from the public XRP Ledger (xrplcluster.com, with s1/s2.ripple.com as backups). Read-only: no wallets, no keys, no signing. Wallet balances below are from the May 2026 snapshot.</p>
 
     <h2 class="section-title">⚡ XRPL Portal Network (3 Active Portals)</h2>
     <div class="cards-grid">
@@ -77,7 +102,7 @@
             <div class="address">rKnp6Gg9w1EyHgLY6c7GdeixdxCct846tu</div>
             <div class="balance-row"><span class="balance-label">Balance</span><span class="balance-value highlight">25.60 XRP</span></div>
             <div class="balance-row"><span class="balance-label">Monitoring</span><span class="balance-value">14+ accounts</span></div>
-            <div class="balance-row"><span class="balance-label">Last Ping</span><span class="balance-value" style="color:var(--green)" id="heartbeat-time">Active</span></div>
+            <div class="balance-row"><span class="balance-label">Last Ping</span><span class="balance-value" style="color:var(--green)" id="heartbeat-time" data-xrpl="ledger-index">Connecting…</span></div>
         </div>
     </div>
 
@@ -160,8 +185,8 @@
     </footer>
 </div>
 <script>
-document.getElementById('scan-time').textContent = new Date().toISOString().split('T')[0] + ' ' + new Date().toTimeString().split(' ')[0] + ' UTC';
-document.getElementById('heartbeat-time').textContent = 'Ledger ' + (Math.floor(Math.random()*100000)+104490000).toLocaleString();
+document.getElementById('scan-time').textContent = new Date().toLocaleString();
 </script>
+<script src="assets/xrpl-live.js" data-config="data/config.json"></script>
 </body>
 </html>

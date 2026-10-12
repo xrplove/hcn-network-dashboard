@@ -2,7 +2,7 @@
 ## Every Creature Gets VIP Treatment From 1,000 AI Agents
 
 **Created:** May 26, 2026 17:48 UTC  
-**Vision By:** Nigel/Xena (sig: 612121936)  
+**Vision By:** Nigel/Xena  
 **Status:** 🟢 DEFINITIVE REQUIREMENT — All Future Development Must Include This
 
 ---
