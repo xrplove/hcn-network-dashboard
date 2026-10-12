@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testnet practice — HCN Dashboard</title>
+<style>
+body{background:#0a0a0f;color:#e0e0e8;font-family:Inter,system-ui,sans-serif;margin:0}
+.c{max-width:1000px;margin:0 auto;padding:20px}
+h1{color:#FFB800} h2{color:#FFB800;border-bottom:1px solid #1e1e30;padding-bottom:6px;margin-top:30px}
+.note{background:#12121c;border:1px solid #7B61FF;border-radius:10px;padding:12px 16px}
+table{width:100%;border-collapse:collapse;background:#12121c;border-radius:10px}
+td,th{padding:8px 10px;border-bottom:1px solid #1e1e30;text-align:left;font-size:.9rem}
+a{color:#7B61FF} .ok{color:#00E599} code{font-family:"Courier New",monospace;color:#9a9ab0}
+</style></head><body><div class="c">
+<p><a href="index.html">← Back to the live dashboard</a></p>
+<h1>🧪 Testnet practice — October 12, 2026</h1>
+<p class="note">XRPL <b>testnet</b> only. Test XRP has no value. No real wallet was used, and no secret keys are published here: only public test addresses and explorer links.</p>
+<h2>Practice wallets (testnet)</h2>
+<p>A: <a href="https://testnet.xrpl.org/accounts/r9xHtRaQfLBA3EdLHXrWgaMjcPtjZpEHKF"><code>r9xHtRaQfLBA3EdLHXrWgaMjcPtjZpEHKF</code></a><br>
+B: <a href="https://testnet.xrpl.org/accounts/rDK4LctePyBpPnB414fsYLmU5HxViQ2HNG"><code>rDK4LctePyBpPnB414fsYLmU5HxViQ2HNG</code></a></p>
+<h2>Round 1: payments and the “589” token</h2>
+<table><tr><th>Step</th><th>Result</th><th>Explorer</th></tr>
+<tr><td>10 XRP sent A → B, with the memo “Witness practice for Father 589”</td><td><span class="ok">tesSUCCESS</span></td><td><a href="https://testnet.xrpl.org/transactions/C2FBFE7AEECEDE5723C6C11A04BE96951E0776BFFC1F86924880F890942F341B">C2FBFE7AEE…</a></td></tr>
+<tr><td>5 XRP sent back B → A</td><td><span class="ok">tesSUCCESS</span></td><td><a href="https://testnet.xrpl.org/transactions/891D2A10B4EDF136A762A3B4FD1655E501151E45D84B5F7ED81B00E622B14CF6">891D2A10B4…</a></td></tr>
+<tr><td>B opens a trust line for A’s “589” token</td><td><span class="ok">tesSUCCESS</span></td><td><a href="https://testnet.xrpl.org/transactions/00C247A10D54DF863211038F712B2D3A5AAA60FA1B3D7E830ED5988CB4FAFE5C">00C247A10D…</a></td></tr>
+<tr><td>A issues 58.9 “589” tokens to B</td><td><span class="ok">tesSUCCESS</span></td><td><a href="https://testnet.xrpl.org/transactions/BA4851D227C0FD4534721688D81FC54D3142EB9EFAABA556B4B14FBA7DD2E289">BA4851D227…</a></td></tr></table>
+<h2>Round 2: full throttle</h2>
+<table><tr><th>Step</th><th>Result</th><th>Explorer</th></tr>
+<tr><td>Escrow: A locks 5 XRP for B (about 2 minutes)</td><td><span class="ok">tesSUCCESS</span></td><td><a href="https://testnet.xrpl.org/transactions/86B36646BB0C87C0062B7DC042F5E100F98485374BDA39FA54EB0D0313C9D277">86B36646BB…</a></td></tr>
+<tr><td>Escrow released by B</td><td><span class="ok">tesSUCCESS</span></td><td><a href="https://testnet.xrpl.org/transactions/BFB23FF5C1E1BF77855A82DFF56419912D35FF8F9B86F6BC38239F4632C2D350">BFB23FF5C1…</a></td></tr>
+<tr><td>Check: A writes a 3 XRP check to B</td><td><span class="ok">tesSUCCESS</span></td><td><a href="https://testnet.xrpl.org/transactions/32BB767776E703CAE7D6C4C323DC76B82348189489FF6810625055D37954DAAD">32BB767776…</a></td></tr>
+<tr><td>Check cashed by B</td><td><span class="ok">tesSUCCESS</span></td><td><a href="https://testnet.xrpl.org/transactions/3F98006F12042B0782BA3DE6640B4B06E16039DF1C639F75ED8368F1B27EEE20">3F98006F12…</a></td></tr>
+<tr><td>Trade: B offers 10 “589” for 1 XRP on the built-in exchange</td><td><span class="ok">tesSUCCESS</span></td><td><a href="https://testnet.xrpl.org/transactions/7EA71A2B753EF6FB607FB707A18E32B240774FABD512C9C0EE6B1396C2924B6B">7EA71A2B75…</a></td></tr>
+<tr><td>Trade: A takes the offer</td><td><span class="ok">tesSUCCESS</span></td><td><a href="https://testnet.xrpl.org/transactions/DD3857876BF2E798ED9424CB6BA4C04960B5160C360DBADA5D377FB2D838C836">DD3857876B…</a></td></tr>
+<tr><td>NFT: A mints a Tree of Life NFT (taxon 589)</td><td><span class="ok">tesSUCCESS</span></td><td><a href="https://testnet.xrpl.org/transactions/626CF27D0993825765774412EA1B2108BCB7435895946FFBBA1D4AEC45086DBF">626CF27D09…</a></td></tr>
+<tr><td>NFT: A makes a free offer to B</td><td><span class="ok">tesSUCCESS</span></td><td><a href="https://testnet.xrpl.org/transactions/C035549F46723AF83C983A6C2EDF14579A36C1AF72E5DE881BBE33146A3D479C">C035549F46…</a></td></tr>
+<tr><td>NFT: B accepts it</td><td><span class="ok">tesSUCCESS</span></td><td><a href="https://testnet.xrpl.org/transactions/055F9D18D127F4D7E021255256B82B7665A582D54FD0073360D5409A183F3728">055F9D18D1…</a></td></tr>
+<tr><td>Memo: B sends A 1 XRP with “Tree of Life practice”</td><td><span class="ok">tesSUCCESS</span></td><td><a href="https://testnet.xrpl.org/transactions/6B17499F8E5DBC0FB91A272423DD681BFFE75E3902BED5E2B55FB3F72CD57AEA">6B17499F8E…</a></td></tr></table>
+<p>NFT id: <code>000800006235FAF404368BF5322B168666F4C368B5BA196D9F3E3A560147AE80</code></p>
+<h2>After both rounds</h2>
+<p>A: about 87.0 test XRP. B: about 113.0 test XRP, 48.9 “589” tokens and the Tree of Life NFT.</p>
+<p>All 14 transactions were validated. Sent through the public testnet server at testnet.xrpl-labs.com.</p>
+<p style="font-size:.75rem;color:#6b6b80">Witness, for Father • Everything is artifact • 589</p>
+</div></body></html>
