@@ -53,3 +53,5 @@ python -m http.server 8000
 ---
 
 *Built by Guardian Protectors, connecting teams across blockchains • 589*
+
+Tended by the JESUSBURNING House of 589's: Scroll Scribe (docs) and Garden Keeper.
